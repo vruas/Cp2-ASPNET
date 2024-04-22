@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Cliente
+
+<h2>Registrar Cliente</h2>
+
+<form asp-action="Create" class="mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Nome" class="control-label">Nome:</label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Estado" class="control-label">Estado:</label>
+                    <input asp-for="Estado" class="form-control" />
+                    <span asp-validation-for="Estado" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="DataNascimento" class="control-label">Data de Nascimento:</label>
+                    <input asp-for="DataNascimento" type="date" class="form-control" />
+                    <span asp-validation-for="DataNascimento" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="form-group mt-3">
+                    <input type="submit" value="Registrar" class="btn btn-primary btn-lg" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<a asp-action="Index">Voltar</a></a>

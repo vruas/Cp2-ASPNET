@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Feedback
+
+<div class="container">
+    <form asp-action="Create" class="mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="TipoFeedback" class="control-label">Tipo:</label>
+                    <input asp-for="TipoFeedback" class="form-control" />
+                    <span asp-validation-for="TipoFeedback" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="DataFeedback" class="control-label">Data:</label>
+                    <input asp-for="DataFeedback" type="date" class="form-control" />
+                    <span asp-validation-for="DataFeedback" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Comentario" class="control-label">Comentário:</label>
+            <textarea asp-for="Comentario" rows="4" class="form-control"></textarea>
+            <span asp-validation-for="Comentario" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <input type="submit" value="Postar" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+
+<a asp-action="Index">Voltar</a></a>
